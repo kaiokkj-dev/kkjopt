@@ -3,340 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050806" />
+  <meta name="description" content="Baixe o KKJOpti, uma central de otimização transparente para Windows." />
   <title>KKJOpti | Download</title>
-  <link rel="icon" type="image/png" href="kkjopti_icon.ico">
+  <link rel="icon" href="kkjopti_icon.ico" />
   <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Inter, Arial, sans-serif;
-}
-
-body {
-  min-height: 100vh;
-  background-color: #000;
-  background-image: radial-gradient(rgba(3, 102, 0, 0.548) 1px, transparent 1px);
-  background-size: 40px 40px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-}
-
-.container {
-  width: 100%;
-  max-width: 900px;
-  background: rgb(0, 0, 0);
-  border: 2px solid rgba(34, 197, 94, 0.18);
-  border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-  overflow: hidden;
-}
-
-.hero {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 30px;
-  padding: 50px;
-  align-items: center;
-}
-
-.left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 0;
-}
-
-.badge {
-  display: inline-block;
-  width: fit-content;
-  max-width: 100%;
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(34, 197, 94, 0.25);
-  background: rgba(34, 197, 94, 0.08);
-  color: #22c55e;
-  font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 18px;
-  letter-spacing: 0.5px;
-}
-
-h1 {
-  font-size: 48px;
-  line-height: 1.05;
-  margin-bottom: 14px;
-  word-break: break-word;
-}
-
-h1 span {
-  color: #22c55e;
-}
-
-.subtitle {
-  color: #aab3ad;
-  font-size: 17px;
-  line-height: 1.6;
-  margin-bottom: 28px;
-  max-width: 520px;
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 18px;
-}
-
-.btn {
-  text-decoration: none;
-  padding: 15px 22px;
-  border-radius: 14px;
-  font-weight: 800;
-  transition: 0.25s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 52px;
-  text-align: center;
-}
-
-.btn-primary {
-  background: #22c55e;
-  color: #06110b;
-  border: 2px solid rgba(34, 197, 94, 0.25);
-}
-
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.18);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: #e5e7eb;
-  border: 2px solid rgba(34, 197, 94, 0.25);
-}
-
-.btn-secondary:hover {
-  transform: translateY(-3px);
-  border-color: #22c55e;
-  color: #22c55e;
-}
-
-.note {
-  font-size: 13px;
-  color: #87918a;
-  line-height: 1.5;
-}
-
-.right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card {
-  width: 100%;
-  max-width: 320px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(34, 197, 94, 0.18);
-  border-radius: 22px;
-  padding: 28px;
-  text-align: center;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
-}
-
-.card h2 {
-  font-size: 28px;
-  margin-bottom: 8px;
-}
-
-.card h2 span {
-  color: #22c55e;
-}
-
-.version {
-  color: #aab3ad;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.features {
-  text-align: left;
-  display: grid;
-  gap: 12px;
-  color: #d4dbd6;
-  font-size: 14px;
-}
-
-.features div {
-  padding: 12px 14px;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 12px;
-  border: 1px solid rgba(34, 197, 94, 0.08);
-  transition: 0.3s;
-}
-
-.features div:hover {
-  border: 1px solid rgb(0, 255, 94);
-  transform: translateY(-3px);
-}
-
-.footer {
-  border-top: 1px solid rgba(34, 197, 94, 0.12);
-  padding: 18px 24px;
-  text-align: center;
-  color: #7d8881;
-  font-size: 13px;
-}
-
-/* TABLET */
-@media (max-width: 820px) {
-  body {
-    padding: 20px;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 32px;
-    gap: 24px;
-  }
-
-  .left {
-    order: 1;
-  }
-
-  .right {
-    order: 2;
-    justify-content: center;
-  }
-
-  h1 {
-    font-size: 38px;
-  }
-
-  .subtitle {
-    font-size: 16px;
-    max-width: 100%;
-  }
-
-  .card {
-    max-width: 100%;
-  }
-}
-
-/* MOBILE */
-@media (max-width: 520px) {
-  body {
-    padding: 14px;
-  }
-
-  .container {
-    border-radius: 18px;
-  }
-
-  .hero {
-    padding: 22px 18px;
-    gap: 20px;
-  }
-
-  .badge {
-    font-size: 11px;
-    padding: 7px 12px;
-  }
-
-  h1 {
-    font-size: 30px;
-    line-height: 1.1;
-  }
-
-  .subtitle {
-    font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
-
-  .buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .btn {
-    width: 100%;
-    padding: 14px 16px;
-    font-size: 14px;
-  }
-
-  .card {
-    padding: 20px;
-    border-radius: 18px;
-  }
-
-  .card h2 {
-    font-size: 24px;
-  }
-
-  .version,
-  .features {
-    font-size: 13px;
-  }
-
-  .features div {
-    padding: 10px 12px;
-  }
-
-  .note {
-    font-size: 12px;
-  }
-
-  .footer {
-    font-size: 12px;
-    padding: 16px;
-  }
-}
+    :root { --bg:#050806; --surface:rgba(10,17,12,.88); --soft:rgba(255,255,255,.035); --line:rgba(125,255,166,.12); --line-strong:rgba(43,242,105,.32); --green:#2bf269; --text:#f2f7f3; --muted:#8e9b91; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { color-scheme:dark; }
+    body { min-height:100vh; display:grid; place-items:center; position:relative; isolation:isolate; padding:32px; overflow-x:hidden; color:var(--text); background:#030604; font-family:Inter,"Segoe UI",Arial,sans-serif; }
+    body::before { content:""; position:fixed; z-index:-2; inset:-20%; pointer-events:none; background:radial-gradient(ellipse 34% 42% at 12% 18%,rgba(28,255,102,.20),transparent 68%),radial-gradient(ellipse 30% 38% at 88% 78%,rgba(0,177,75,.15),transparent 70%),radial-gradient(ellipse 26% 28% at 72% 6%,rgba(43,242,105,.08),transparent 72%); filter:blur(12px); animation:aurora 15s ease-in-out infinite alternate; }
+    body::after { content:""; position:fixed; z-index:-1; inset:0; pointer-events:none; opacity:.46; background-image:linear-gradient(rgba(90,255,140,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(90,255,140,.035) 1px,transparent 1px),linear-gradient(135deg,transparent 0 49.8%,rgba(43,242,105,.028) 50%,transparent 50.2%); background-size:54px 54px,54px 54px,180px 180px; mask-image:radial-gradient(ellipse at center,black 12%,transparent 78%); }
+    @keyframes aurora { from{transform:translate3d(-2%,-1%,0) scale(1)} to{transform:translate3d(2%,1.5%,0) scale(1.08)} }
+    .shell { position:relative; width:min(1060px,100%); overflow:hidden; border:1px solid var(--line); border-radius:26px; background:linear-gradient(145deg,rgba(10,18,12,.94),rgba(5,10,7,.92)); box-shadow:0 36px 100px rgba(0,0,0,.62),0 0 0 1px rgba(43,242,105,.025) inset,0 0 90px rgba(14,175,67,.055); backdrop-filter:blur(22px); }
+    .shell::before { content:""; position:absolute; width:460px; height:460px; right:-220px; top:-270px; border:1px solid rgba(43,242,105,.10); border-radius:50%; box-shadow:0 0 0 50px rgba(43,242,105,.018),0 0 0 110px rgba(43,242,105,.012); pointer-events:none; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; padding:20px 28px; border-bottom:1px solid var(--line); }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:-.02em; }
+    .wordmark { display:inline-flex; align-items:baseline; gap:0; font-size:16px; letter-spacing:-.035em; }
+    .brand-mark { width:42px; height:42px; display:grid; place-items:center; border:1px solid rgba(43,242,105,.16); border-radius:12px; background:rgba(43,242,105,.055); }
+    .brand img { width:30px; height:30px; object-fit:contain; filter:saturate(1.45) brightness(1.08) drop-shadow(0 0 9px rgba(43,242,105,.22)); }
+    .wordmark .accent { color:var(--green); }
+    .status { display:flex; align-items:center; gap:8px; color:#b4c0b6; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .status::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--green); box-shadow:0 0 15px var(--green); }
+    .hero { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr); gap:58px; align-items:center; padding:68px 64px 60px; }
+    .eyebrow { margin-bottom:18px; color:var(--green); font-size:11px; font-weight:900; letter-spacing:.22em; text-transform:uppercase; }
+    h1 { max-width:620px; font-size:clamp(44px,6vw,68px); line-height:.98; letter-spacing:-.055em; }
+    h1 span { display:block; color:var(--green); text-shadow:0 0 32px rgba(43,242,105,.18); }
+    .subtitle { max-width:560px; margin-top:24px; color:var(--muted); font-size:17px; line-height:1.7; }
+    .buttons { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
+    .btn { min-height:52px; display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:0 22px; border:1px solid transparent; border-radius:12px; color:var(--text); font-size:14px; font-weight:800; text-decoration:none; transition:transform .2s,border-color .2s,background .2s,box-shadow .2s; }
+    .btn:hover { transform:translateY(-2px); }
+    .btn-primary { color:#031107; background:var(--green); box-shadow:0 12px 34px rgba(43,242,105,.16); }
+    .btn-primary:hover { background:#4aff82; box-shadow:0 16px 38px rgba(43,242,105,.24); }
+    .btn-secondary { border-color:var(--line); background:rgba(255,255,255,.025); }
+    .btn-secondary:hover { border-color:var(--line-strong); background:rgba(43,242,105,.05); }
+    .note { margin-top:18px; color:#6f7b72; font-size:12px; line-height:1.6; }
+    .note strong { color:#a5b1a7; }
+    .preview { position:relative; padding:1px; border-radius:22px; background:linear-gradient(145deg,rgba(43,242,105,.45),rgba(43,242,105,.04) 48%,rgba(255,255,255,.08)); box-shadow:0 22px 55px rgba(0,0,0,.36); }
+    .preview-inner { padding:28px; border-radius:21px; background:#080d09; }
+    .preview-head { display:flex; align-items:center; gap:15px; padding-bottom:23px; border-bottom:1px solid var(--line); }
+    .preview-logo { width:62px; height:62px; display:grid; place-items:center; flex:0 0 auto; border:1px solid rgba(43,242,105,.16); border-radius:17px; background:linear-gradient(145deg,rgba(43,242,105,.10),rgba(43,242,105,.025)); }
+    .preview-head img { width:45px; height:45px; object-fit:contain; filter:saturate(1.5) brightness(1.08) drop-shadow(0 0 14px rgba(43,242,105,.22)); }
+    .preview-head h2 { font-size:22px; letter-spacing:-.025em; }
+    .version { margin-top:4px; color:var(--muted); font-size:12px; }
+    .features { display:grid; gap:10px; margin-top:22px; }
+    .feature { display:flex; align-items:center; gap:12px; padding:13px 14px; border:1px solid rgba(255,255,255,.045); border-radius:12px; background:var(--soft); }
+    .feature-icon { width:30px; height:30px; display:grid; place-items:center; flex:0 0 auto; border-radius:9px; color:var(--green); background:rgba(43,242,105,.09); font-size:12px; font-weight:900; }
+    .feature strong { display:block; font-size:13px; }
+    .feature small { display:block; margin-top:3px; color:var(--muted); font-size:11px; }
+    footer { display:flex; justify-content:space-between; gap:20px; padding:18px 28px; border-top:1px solid var(--line); color:#657068; font-size:11px; }
+    @media (max-width:820px) { body{padding:18px}.hero{grid-template-columns:1fr;gap:40px;padding:48px 36px}.preview{max-width:560px} }
+    @media (max-width:520px) { body{padding:10px;place-items:start center}.shell{border-radius:20px}.topbar{padding:16px 18px}.status{font-size:0}.hero{padding:40px 20px 28px;gap:32px}h1{font-size:43px}.subtitle{font-size:15px}.buttons{display:grid}.btn{width:100%}.preview-inner{padding:20px}footer{flex-direction:column;align-items:center;text-align:center;gap:6px} }
+    @media (prefers-reduced-motion:reduce) { body::before{animation:none} }
   </style>
 </head>
 <body>
-  <div class="container">
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark"><img src="logo_mark.png" alt="Logo KKJOpti" /></span><span class="wordmark">KKJ<span class="accent">Opti</span></span></div>
+      <div class="status">Disponível para Windows</div>
+    </header>
     <section class="hero">
-      <div class="left">
-        <div class="badge">OTIMIZAÇÃO PARA WINDOWS</div>
-        <h1>Baixe o <span>KKJOpti</span></h1>
-        <p class="subtitle">
-          Um app simples e rápido para otimização do Windows, FPS, internet, memória RAM e desempenho geral.
-        </p>
+      <div>
+        <p class="eyebrow">Central de otimização</p>
+        <h1>Seu PC, <span>mais eficiente.</span></h1>
+        <p class="subtitle">Controle desempenho, jogos, internet e memória em uma interface simples, segura e transparente.</p>
         <div class="buttons">
-          <a class="btn btn-primary" href="https://github.com/kaiokkj-dev/kkjopti/releases/download/v1.0/kkjopti.Setup.1.0.0.exe" target="_blank">
-            BAIXAR AGORA
-          </a>
-          <a class="btn btn-secondary" href="https://kaiohenrique.dev/" target="_blank">
-            SOBRE O DESENVOLVEDOR
-          </a>
+          <a class="btn btn-primary" href="https://github.com/kaiokkj-dev/kkjopti/releases/download/v1.0/kkjopti.Setup.1.0.0.exe">↓&nbsp; Baixar para Windows</a>
+          <a class="btn btn-secondary" href="https://kaiohenrique.dev/" target="_blank" rel="noopener">Conhecer o desenvolvedor</a>
         </div>
-        <p class="note">
-          Se o Windows mostrar aviso de segurança, clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>.
-        </p>
+        <p class="note">O Windows pode exibir um aviso por o aplicativo ainda não possuir assinatura digital. Use <strong>Mais informações → Executar assim mesmo</strong>.</p>
       </div>
-      <div class="right">
-        <div class="card">
-          <h2>KKJ<span>Opti</span></h2>
-          <div class="version">Versão 1.0</div>
+      <aside class="preview" aria-label="Recursos do KKJOpti">
+        <div class="preview-inner">
+          <div class="preview-head"><span class="preview-logo"><img src="logo_mark.png" alt="" /></span><div><h2>KKJOpti</h2><p class="version">Versão 2.0</p></div></div>
           <div class="features">
-            <div>⚡ Otimização rápida do sistema</div>
-            <div>🎮 Melhorias para FPS e jogos</div>
-            <div>🌐 Ajustes de internet e rede</div>
-            <div>🧠 Perfis para memória RAM</div>
+            <div class="feature"><span class="feature-icon">01</span><div><strong>Perfis inteligentes</strong><small>Ajustes seguros para cada objetivo</small></div></div>
+            <div class="feature"><span class="feature-icon">02</span><div><strong>Controle transparente</strong><small>Você escolhe tudo antes de aplicar</small></div></div>
+            <div class="feature"><span class="feature-icon">03</span><div><strong>Histórico e restauração</strong><small>Mais segurança para experimentar</small></div></div>
           </div>
         </div>
-      </div>
+      </aside>
     </section>
-    <div class="footer">
-      © 2026 KKJOpti by Kaio. Todos os direitos reservados.
-    </div>
-  </div>
+    <footer><span>© 2026 KKJOpti by Kaio</span><span>Feito para Windows 10 e 11</span></footer>
+  </main>
 </body>
 </html>
